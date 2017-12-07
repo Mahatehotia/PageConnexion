@@ -17,6 +17,7 @@ class Accueil{
     public function index(){
         include "views/header.php";
         include "views/menu.php";
+        include "views/accueil.php";
         include "views/footer.php";
     }
 }
