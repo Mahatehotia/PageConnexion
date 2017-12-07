@@ -1,0 +1,30 @@
+/* Full height image header */
+.logo {
+	width: 50px; 
+	height: 50px;
+}
+.background {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../_images/background.jpg");
+}
+.espaceVide{
+    height: 350px;
+}
+.navbar{
+    background-color: white;
+}
+
+textarea{
+    resize: none;
+}
+
+a.button{
+    text-decoration: none;
+    color: white;
+}
+
+body
+{
+	font-family: Roboto;
+}
