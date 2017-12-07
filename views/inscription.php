@@ -57,9 +57,19 @@
 
                 <!-- Email input-->
                 <div class="form-group">
-                    <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="adresseEmail">Votre Email</label>
+                    <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="adresseEmail">Votre email</label>
                     <div class="col-md-4">
                         <input id="adresseEmail" name="adresseEmail" type="email" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- sexe input-->
+                <div class="form-group">
+                    <label class="col-sm-4 col-md-4 col-sm-4 control-label" for="sexe">Votre sexe</label>
+                    <div class="col-md-8">
+                        <label class="radio-inline"><input type="radio" id="homme" name="sexe" value="homme" checked required>Homme</label>
+                        <label class="radio-inline"><input type="radio" id="femme" name="sexe"  value="femme">Femme</label>
+                        <label class="radio-inline"><input type="radio" id="autre" name="sexe"  value="autre">Autre</label>
                     </div>
                 </div>
 

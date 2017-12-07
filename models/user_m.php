@@ -27,9 +27,26 @@ class User_m{
     }
 
     function insertUnUser($donnees){
-        $requete="INSERT INTO utilisateurs(prenomUser,nomUser,pseudo,motDePasse,adresseEmail,dateInscription) VALUES
-    	('".$donnees['prenomUser']."','".$donnees['nomUser']."',".$donnees['pseudo'].",'".$donnees['motDePasse']."','".$donnees['adresseEmail']."','".$donnees['dateInscription']."');";
-        $nbRes = $this->db->exec($requete);
+        //$requete="INSERT INTO utilisateurs(prenomUser,nomUser,pseudo,motDePasse,adresseEmail,dateInscription) VALUES
+    	//('".$donnees['prenomUser']."','".$donnees['nomUser']."',".$donnees['pseudo'].",'".$donnees['motDePasse']."','".$donnees['adresseEmail']."','".$donnees['dateInscription']."');";
+        //$this->db->exec($requete);
+
+        $requete="INSERT INTO utilisateurs(prenomUser,nomUser,pseudo,motDePasse,adresseEmail,dateInscription) VALUES 
+                  (:prenomUser,:nomUser,:pseudo,:motDePasse,:adresseEmail,:dateInscription);";
+     	try {
+    		$prep=$this->db->prepare($requete);
+    		$prep->bindParam(':prenomUser',$donnees['prenomUser']);
+    		$prep->bindParam(':nomUser',$donnees['nomUser']);
+    		$prep->bindParam(':pseudo',$donnees['pseudo']);
+    		$prep->bindParam(':motDePasse',$donnees['motDePasse']);
+            $prep->bindParam(':adresseEmail',$donnees['adresseEmail']);
+            $prep->bindParam(':dateInscription',$donnees['dateInscription']);
+			$prep->execute();
+
+			}
+		catch ( Exception $e ) {
+				echo "Erreur methode insertUnUser : ", $e->getMessage();
+			}
     }
 
     function deleteUnUser($id){

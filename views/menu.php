@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a  href="#"><img class="logo" src="#" alt="Logo"></a></li>
+                        <li><a  href="<?php echo BASE_URL?>index.php/Accueil/index"><img class="logo" src="#" alt="Logo"></a></li>
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right">

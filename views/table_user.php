@@ -11,7 +11,6 @@
             <thead>
             <tr><th>id</th><th>prenom</th><th>nom</th><th>pseudo</th><th>motdepasse</th><th>adresseemail</th><th>date</th>
                 <?php //if(isset($_SESSION['droit']) and $_SESSION['droit']=='DROITadmin'): ?>
-                <th>opération</th>
                 <?php //endif;?>
             </tr>
             </thead>

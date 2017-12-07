@@ -9,7 +9,6 @@ class User{
     public function index(){
         include "views/header.php";
         include "views/menu.php";
-        include "views/inscription.php";
         include "views/footer.php";
     }
 
@@ -20,7 +19,6 @@ class User{
         include "views/footer.php";
     }
     public function afficherUser(){
-
         include("views/header.php");
         include("views/menu.php");
         $data=$this->instanceModelUser->getAllUsers();
